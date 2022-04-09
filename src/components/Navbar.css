@@ -1,0 +1,32 @@
+nav {
+  box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+nav h1 {
+  margin-left: 1em;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: auto;
+  border: none;
+}
+.nav-btn-icon {
+  margin-right: 1em;
+}
+
+.nav-btn {
+  border: none;
+  background-color: inherit;
+  color: inherit;
+
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.dark nav {
+  box-shadow: 1px 1px hsl(200, 15%, 8%);
+  background-color: hsl(209, 23%, 22%);
+}

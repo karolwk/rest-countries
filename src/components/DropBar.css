@@ -1,0 +1,41 @@
+.select-wrapper {
+  display: flex;
+  border: none;
+  background-color: white;
+  color: hsl(0, 0%, 52%);
+  box-shadow: 1px 1px 1px 1px lightgray;
+  border-radius: 5px;
+  width: 15em;
+}
+
+select {
+  font-size: 14px;
+  font: inherit;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: inherit;
+  color: inherit;
+
+  padding: 1em 1em;
+  width: 100%;
+}
+
+select:focus {
+  outline: none;
+}
+option {
+  font-size: 14px;
+}
+
+.after-select {
+  width: 1em;
+  border: none;
+  display: inline-block;
+}
+
+.dark .select-wrapper {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+  box-shadow: 1px 1px hsl(200, 15%, 8%);
+}

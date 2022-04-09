@@ -1,0 +1,31 @@
+.card-item {
+  background-color: white;
+  font: inherit;
+  color: inherit;
+  width: 320px;
+  height: 30em;
+  margin: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-description {
+  padding: 1em;
+}
+
+.card-item span {
+  font-weight: bold;
+}
+
+.card-item img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+
+  height: 16em;
+}
+
+.dark .card-item {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+  box-shadow: 1px 1px hsl(200, 15%, 8%);
+}
