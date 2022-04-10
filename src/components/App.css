@@ -41,6 +41,14 @@ input {
   color: hsl(0, 0%, 52%);
 }
 
+.page-404 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+}
+
 /* BUTTONS */
 
 .btn-standard {
