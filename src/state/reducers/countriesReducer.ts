@@ -1,7 +1,6 @@
 import { ActionType } from '../action-types';
 import { Action } from '../actions';
 import { CountryInteface } from '../../shared/api.interface';
-import _ from 'lodash';
 
 interface FetchAllState {
   loading: boolean;
