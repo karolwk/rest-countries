@@ -8,7 +8,12 @@ interface FetchAllState {
   data: CountryInteface[];
   filtredView: CountryInteface[];
   countryView: CountryInteface;
-  countryNeighbors: string[];
+  countryNeighbors:
+    | {
+        name?: string;
+        code?: string;
+      }[]
+    | [];
   searchTerm: string;
   searchRegion: string;
 }
@@ -101,7 +106,7 @@ const countriesReducer = (
     case ActionType.GET_COUNTRY:
       // Gets country info from state.data and sets its neighbors state.
       const country = state.data.find((ele) => {
-        return ele.name?.toLowerCase() === action.payload.toLowerCase();
+        return ele.alpha3Code?.toLowerCase() === action.payload.toLowerCase();
       });
       if (country) {
         if (country.borders) {
@@ -109,7 +114,10 @@ const countriesReducer = (
           for (let borderCode of country.borders) {
             for (let country_ of state.data) {
               if (country_.alpha3Code === borderCode) {
-                neighbors.push(country_.name);
+                neighbors.push({
+                  name: country_.name,
+                  code: country_.alpha3Code,
+                });
                 break;
               }
             }
@@ -117,7 +125,7 @@ const countriesReducer = (
           return {
             ...state,
             countryView: country,
-            countryNeighbors: neighbors as string[],
+            countryNeighbors: neighbors,
           };
         }
         return { ...state, countryNeighbors: [], countryView: country };

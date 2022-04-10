@@ -17,9 +17,13 @@ const CardItem: React.FC<CardItemProps> = ({
 }) => {
   return (
     <div className="card-item">
-      <img alt={countryName + `-flag`} src={flag} />
+      <div className="card-flag">
+        <img alt={countryName + `-flag`} src={flag} />
+      </div>
       <div className="card-description">
-        <h3>{countryName}</h3>
+        <p>
+          <span>{countryName}</span>
+        </p>
         <p>
           <span>Population: </span>
           {numeral(population).format('0,0')}

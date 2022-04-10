@@ -52,7 +52,7 @@ const CountryList: React.FC = () => {
           {filtredView.map((ele) => (
             <Link
               key={ele.name + '-link'}
-              to={`${ROOT_URL}/country/${ele.name}`}
+              to={`${ROOT_URL}/country/${ele.alpha3Code}`}
             >
               <CardItem
                 flag={ele.flags?.svg}

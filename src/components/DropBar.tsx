@@ -16,6 +16,7 @@ const DropBar: React.FC<DropBarProps> = ({
   return (
     <div className="select-wrapper">
       <select
+        aria-label="filter-by-region"
         onChange={(e) => {
           onChange(e.target.value);
         }}

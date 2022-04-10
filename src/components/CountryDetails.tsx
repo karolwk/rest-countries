@@ -95,10 +95,10 @@ const CountryDetails: React.FC = () => {
                 {countryNeighbors.map((neighbor) => {
                   return (
                     <Link
-                      to={`${ROOT_URL}/country/${neighbor}`}
+                      to={`${ROOT_URL}/country/${neighbor.code}`}
                       key={neighbor + '-link'}
                     >
-                      <button className="btn-standard">{neighbor}</button>
+                      <button className="btn-standard">{neighbor.name}</button>
                     </Link>
                   );
                 })}
