@@ -32,10 +32,7 @@ const CountryDetails: React.FC = () => {
       ) : (
         <div className="country-page">
           <Link to="/">
-            <button
-              className="btn-standard"
-              onClick={() => getCountry(params.id as string)}
-            >
+            <button className="btn-standard">
               <span>&larr;</span> Back
             </button>
           </Link>
