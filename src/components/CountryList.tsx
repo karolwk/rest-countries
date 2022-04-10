@@ -10,6 +10,7 @@ import Spinner from './Spinner';
 import SearchBar from './SearchBar';
 import DropBar from './DropBar';
 import { FaSearch } from 'react-icons/fa';
+import { ROOT_URL } from '../shared/urls';
 
 const CountryList: React.FC = () => {
   const { fetchAllCountries, filterByName, filterByRegion, setStartinView } =
@@ -49,7 +50,10 @@ const CountryList: React.FC = () => {
           {error && console.log(error)}
 
           {filtredView.map((ele) => (
-            <Link key={ele.name + '-link'} to={`/country/${ele.name}`}>
+            <Link
+              key={ele.name + '-link'}
+              to={`${ROOT_URL}/country/${ele.name}`}
+            >
               <CardItem
                 flag={ele.flags?.svg}
                 countryName={ele.name}

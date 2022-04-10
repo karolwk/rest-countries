@@ -4,6 +4,7 @@ import CountryList from './CountryList';
 import CountryDetails from './CountryDetails';
 import Navbar from './Navbar';
 import NoMatch from './NoMatch';
+import { ROOT_URL } from '../shared/urls';
 
 import { PersistGate } from 'redux-persist/integration/react';
 import './App.css';
@@ -17,7 +18,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route
-              path="/"
+              path={ROOT_URL}
               element={
                 <Navbar>
                   <CountryList />
@@ -25,7 +26,7 @@ const App = () => {
               }
             />
             <Route
-              path="/country/:id"
+              path={ROOT_URL + '/country/:id'}
               element={
                 <Navbar>
                   <CountryDetails />
@@ -33,7 +34,7 @@ const App = () => {
               }
             />
             <Route
-              path="*"
+              path={ROOT_URL + '/*'}
               element={
                 <Navbar>
                   <NoMatch />

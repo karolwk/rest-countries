@@ -3,6 +3,7 @@ import { useTypedSelector } from '../hooks/useTypedSelector';
 import { useActions } from '../hooks/useActions';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { ROOT_URL } from '../shared/urls';
 import numeral from 'numeral';
 
 import Spinner from './Spinner';
@@ -31,7 +32,7 @@ const CountryDetails: React.FC = () => {
         <Spinner />
       ) : (
         <div className="country-page">
-          <Link to="/">
+          <Link to={ROOT_URL}>
             <button className="btn-standard">
               <span>&larr;</span> Back
             </button>
@@ -93,7 +94,10 @@ const CountryDetails: React.FC = () => {
               <div className="country-neighbors">
                 {countryNeighbors.map((neighbor) => {
                   return (
-                    <Link to={`/country/${neighbor}`} key={neighbor + '-link'}>
+                    <Link
+                      to={`${ROOT_URL}/country/${neighbor}`}
+                      key={neighbor + '-link'}
+                    >
                       <button className="btn-standard">{neighbor}</button>
                     </Link>
                   );

@@ -1,5 +1,6 @@
 import { FaRegFrown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { ROOT_URL } from '../shared/urls';
 const NoMatch: React.FC = () => {
   return (
     <main>
@@ -7,7 +8,7 @@ const NoMatch: React.FC = () => {
         <h1>
           404 - Page not found <FaRegFrown />
         </h1>
-        <Link to="/">
+        <Link to={ROOT_URL}>
           <button className="btn-standard">
             <span>&larr;</span> Back
           </button>
