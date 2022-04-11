@@ -8,7 +8,7 @@ const NoMatch: React.FC = () => {
         <h1>
           404 - Page not found <FaRegFrown />
         </h1>
-        <Link to={ROOT_URL}>
+        <Link to={ROOT_URL + '/'}>
           <button className="btn-standard">
             <span>&larr;</span> Back
           </button>

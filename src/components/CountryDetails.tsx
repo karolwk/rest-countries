@@ -32,7 +32,7 @@ const CountryDetails: React.FC = () => {
         <Spinner />
       ) : (
         <div className="country-page">
-          <Link to={ROOT_URL}>
+          <Link to="/">
             <button className="btn-standard">
               <span>&larr;</span> Back
             </button>

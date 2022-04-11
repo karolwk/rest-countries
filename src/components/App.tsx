@@ -9,13 +9,13 @@ import { ROOT_URL } from '../shared/urls';
 import { PersistGate } from 'redux-persist/integration/react';
 import './App.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route
               path={ROOT_URL}
@@ -42,7 +42,7 @@ const App = () => {
               }
             ></Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </PersistGate>
     </Provider>
   );

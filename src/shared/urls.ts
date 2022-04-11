@@ -1,1 +1,1 @@
-export const ROOT_URL = '/rest-countries';
+export const ROOT_URL = '';
